@@ -85,10 +85,10 @@ body {
 }
 
 .welcome-text {
-    margin-left: 600px; /* Зміщення тексту правіше */
-    font-size: 1.2rem; /* Розмір шрифту */
+    margin-left: 600px; 
+    font-size: 1.2rem; 
     color: #388e3c;
-    line-height: 1.5; /* Міжрядковий інтервал */
+    line-height: 1.5;
     text-align: right;
 }
 
@@ -177,4 +177,114 @@ nav ul li a:hover {
     border: 2px solid #388e3c;
     margin: 0; 
     padding: 10px; 
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; 
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        border: none;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .left,
+    .right {
+        display: none; 
+    }
+
+    .center {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .center-footer {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .news-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .news-item h3 {
+        font-size: 1rem;
+    }
+
+    .news-item p {
+        font-size: 0.9rem;
+    }
+
+    .read-more {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    .right img {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    .welcome-text {
+        font-size: 1rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .center {
+        padding: 5px;
+    }
+
+    .footer h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .center-footer a {
+        font-size: 20px;
+    }
+
+    .news-section h2,
+    .news-item h3 {
+        font-size: 1rem;
+    }
 }
