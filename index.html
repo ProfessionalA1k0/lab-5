@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ботанічний Сад</h1>
+            <p id="welcome-text" class="welcome-text">Вітаємо в нашому<br>ботанічному саду!</p>
+        </div>
+
+        <div class="left">
+            <nav>
+                <ul>
+                    <li><a href="index.html">ГОЛОВНА</a></li>
+                    <li><a href="page1.html">ПРО НАС</a></li>
+                    <li><a href="page2.html">ІСТОРІЯ</a></li>
+                    <li><a href="page3.html">ЕКСПОЗИЦІЇ</a></li>
+                    <li><a href="page4.html">ВІДВІДУВАЧАМ</a></li>
+                </ul>
+            </nav>
+            <p>Тут ви можете дізнатися більше про наш сад.</p>
+        </div>
+
+        <div class="center">
+            <div class="news-section">
+                <h2>Останні новини саду</h2>
+                <div class="news-item">
+                    <h3>Оновлення колекції квітів</h3>
+                    <p class="date">19 вересня 2024</p>
+                    <p>Наш ботанічний сад отримав нову партію рідкісних орхідей з тропічних регіонів. Відвідувачі матимуть можливість побачити їх у теплиці з наступного тижня.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Лекція про збереження екосистем</h3>
+                    <p class="date">15 вересня 2024</p>
+                    <p>Запрошуємо на лекцію про важливість збереження екосистем, яка відбудеться у нашому саду. Лекцію проведуть відомі науковці.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Виставка рідкісних рослин</h3>
+                    <p class="date">10 вересня 2024</p>
+                    <p>Не пропустіть виставку рідкісних рослин, яка відбудеться у ботанічному саду цього місяця. Чекаємо на вас!</p>
+                </div>
+                <button class="read-more" onclick="showMoreNews()">Читати більше</button>
+
+                <div class="pentagon-section">
+                    <h3>Обчислення площі п'ятикутника</h3>
+                    <label for="side">Довжина сторони (a): </label>
+                    <input type="number" id="side" step="0.01" required><br>
+                    <label for="apothem">Апофема: </label>
+                    <input type="number" id="apothem" step="0.01" required><br>
+                    <button onclick="calculatePentagonArea()">Обчислити площу</button>
+                </div>
+                <div id="pentagon-area-result"></div>
+                <div class="triangle-section">
+                    <h3>Перевірка можливості побудови трикутника</h3>
+                    <label for="sideA">Сторона A: </label>
+                    <input type="number" id="sideA" step="0.01" required><br>
+                    <label for="sideB">Сторона B: </label>
+                    <input type="number" id="sideB" step="0.01" required><br>
+                    <label for="sideC">Сторона C: </label>
+                    <input type="number" id="sideC" step="0.01" required><br>
+                    <button onclick="checkTriangle()">Перевірити</button>
+                </div>
+                <h2>Редагований список контейнерів</h2>
+        <ol id="editable-list">
+            <li data-initial-text="Текст для редагування 1">Текст для редагування 1</li>
+            <li data-initial-text="Текст для редагування 2">Текст для редагування 2</li>
+            <li data-initial-text="Текст для редагування 3">Текст для редагування 3</li>
+            <li data-initial-text="Текст для редагування 4">Текст для редагування 4</li>
+            <li data-initial-text="Текст для редагування 5">Текст для редагування 5</li>
+            <li data-initial-text="Текст для редагування 6">Текст для редагування 6</li>
+        </ol>
+            </div>
+        </div>
+
+        <div class="right">
+            <h3>Галерея зображень</h3>
+            <input type="checkbox" id="capitalizeToggle"> Встановити верхній регістр перших літер слів<br>
+            <a href="images/схема.jpg" target="_blank">
+                <img src="images/схема.jpg" alt="Схема саду">
+            </a>
+            <a href="images/картинка1.jpg" target="_blank">
+                <img src="images/картинка1.jpg" alt="Зображення саду 1">
+            </a>
+            <a href="images/картинка2.jpg" target="_blank">
+                <img src="images/картинка2.jpg" alt="Зображення саду 2">
+            </a>
+            <p>Ознайомтеся з фотографіями нашого саду.</p>
+        </div>
+
+        <div class="center-footer">
+            <p>Слідкуйте за нами:</p>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="footer">
+            <div>
+                <h3>Бережіть природу</h3>
+                <p>АДРЕСА: вул. Зелених рослин, 10</p>
+                <p>ТЕЛЕФОН: (123) 456-7890</p>
+                <p>ЕЛЕКТРОННА ПОШТА: info@botanicalgarden.com</p>
+            </div>
+            <div id="working-hours">
+                <p>ГОДИНИ РОБОТИ:</p>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+                <p>Сб-Нд: 10:00 - 16:00</p>
+            </div>
+        </div>
+    
+    </div>
+    <script>
+        // JavaScript-код для обміну текстами місцями
+        document.addEventListener("DOMContentLoaded", function () {
+            // Отримуємо елементи за їх id
+            const welcomeText = document.getElementById("welcome-text");
+            const workingHours = document.getElementById("working-hours");
+
+            // Зберігаємо початковий текст
+            const welcomeTextContent = welcomeText.innerHTML;
+            const workingHoursContent = workingHours.innerHTML;
+
+            // Обмінюємо текст місцями
+            welcomeText.innerHTML = workingHoursContent;
+            workingHours.innerHTML = `<p>${welcomeTextContent}</p>`;
+        }
+        );
+    </script>
+    <script>
+        function calculatePentagonArea() {
+            const side = parseFloat(document.getElementById("side").value);
+            const apothem = parseFloat(document.getElementById("apothem").value);
+            
+            if (!isNaN(side) && !isNaN(apothem)) {
+                const area = (5 * side * apothem) / 2;
+                document.getElementById("pentagon-area-result").innerText = `Площа п'ятикутника: ${area.toFixed(2)} кв.од.`;
+            } else {
+                alert("Будь ласка, введіть коректні значення для обчислення.");
+            }
+        }
+        function checkTriangle() {
+            const sideA = parseFloat(document.getElementById("sideA").value);
+            const sideB = parseFloat(document.getElementById("sideB").value);
+            const sideC = parseFloat(document.getElementById("sideC").value);
+        
+            if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
+                alert("Можливо побудувати трикутник.");
+                document.cookie = "triangleCheck=Можливо побудувати трикутник; path=/";
+            } else {
+                alert("Неможливо побудувати трикутник.");
+                document.cookie = "triangleCheck=Неможливо побудувати трикутник; path=/";
+            }
+        }
+        
+        // Завантаження даних із cookies при оновленні сторінки
+        document.addEventListener("DOMContentLoaded", function () {
+            const cookies = document.cookie.split("; ");
+            let triangleCheck = cookies.find(row => row.startsWith("triangleCheck="));
+            
+            if (triangleCheck) {
+                triangleCheck = triangleCheck.split("=")[1];
+                const result = confirm(`${triangleCheck}\nНатисніть "OK", щоб видалити дані з cookies.`);
+                
+                if (result) {
+                    document.cookie = "triangleCheck=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    alert("Дані з cookies видалено.");
+                    location.reload();
+                }
+            }
+        });
+    </script>
+
+    <script>
+            // Функція для встановлення верхнього регістру
+            function capitalizeWords() {
+                const rightBlock = document.querySelector('.right');
+                rightBlock.innerHTML = rightBlock.innerHTML.replace(/\b\w/g, letter => letter.toUpperCase());
+            }
+
+            // Обробник події blur
+            document.addEventListener("DOMContentLoaded", function () {
+                const capitalizeCheckbox = document.getElementById('capitalize-checkbox');
+                
+                // Встановлюємо значення чекбоксу з localStorage
+                const capitalizeSetting = localStorage.getItem("capitalizeWords");
+                if (capitalizeSetting === "true") {
+                    capitalizeCheckbox.checked = true;
+                    capitalizeWords();
+                }
+
+                // Збереження значення чекбоксу в localStorage при події blur
+                capitalizeCheckbox.addEventListener('blur', function () {
+                    localStorage.setItem("capitalizeWords", capitalizeCheckbox.checked);
+                    if (capitalizeCheckbox.checked) {
+                        capitalizeWords();
+                    } else {
+                        location.reload(); // Перезавантажуємо, щоб скинути зміни
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Отримуємо елемент для галочки та блок з класом "right"
+                const checkbox = document.getElementById("capitalize-checkbox");
+                const rightBlock = document.querySelector(".right");
+        
+                // Перевірка збереженого значення в localStorage
+                const capitalizeText = localStorage.getItem("capitalizeText");
+        
+                // Якщо збережене значення є і це true, застосовуємо форматування
+                if (capitalizeText === "true") {
+                    capitalizeFirstLetter(rightBlock);
+                    checkbox.checked = true;
+                }
+        
+                // Додаємо обробник події для зміни стану галочки
+                checkbox.addEventListener("change", function() {
+                    if (checkbox.checked) {
+                        capitalizeFirstLetter(rightBlock);
+                        localStorage.setItem("capitalizeText", "true");
+                    } else {
+                        resetText(rightBlock);
+                        localStorage.setItem("capitalizeText", "false");
+                    }
+                });
+        
+                // Функція для капіталізації першої літери кожного слова
+                function capitalizeFirstLetter(element) {
+                    const paragraphs = element.querySelectorAll("p, h3, a");
+                    paragraphs.forEach(paragraph => {
+                        const words = paragraph.textContent.split(" ");
+                        const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+                        paragraph.textContent = capitalizedWords.join(" ");
+                    });
+                }
+        
+                // Функція для скидання тексту в початковий вигляд
+                function resetText(element) {
+                    const paragraphs = element.querySelectorAll("p, h3, a");
+                    paragraphs.forEach(paragraph => {
+                        paragraph.textContent = paragraph.textContent.toLowerCase();
+                    });
+                }
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const capitalizeToggle = document.getElementById("capitalizeToggle");
+                const rightSection = document.querySelector(".right");
+            
+                // Перевірка і встановлення збереженого стану при завантаженні сторінки
+                if (localStorage.getItem("capitalizeEnabled") === "true") {
+                    capitalizeToggle.checked = true;
+                    capitalizeTextInRightSection();
+                }
+            
+                // Додаємо обробник події blur до всіх елементів у блоці right
+                capitalizeToggle.addEventListener("change", function () {
+                    if (capitalizeToggle.checked) {
+                        capitalizeTextInRightSection();
+                    } else {
+                        resetTextInRightSection();
+                    }
+                    localStorage.setItem("capitalizeEnabled", capitalizeToggle.checked);
+                });
+            
+                function capitalizeTextInRightSection() {
+                    rightSection.querySelectorAll("p, h3, a").forEach(element => {
+                        element.innerHTML = element.innerHTML
+                            .split(' ')
+                            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                            .join(' ');
+                    });
+                }
+            
+                function resetTextInRightSection() {
+                    rightSection.querySelectorAll("p, h3, a").forEach(element => {
+                        element.innerHTML = element.innerHTML.toLowerCase();
+                    });
+                }
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const editableList = document.getElementById("editable-list");
+    
+                // Обробник події подвійного кліку на елементі списку
+                editableList.addEventListener("dblclick", function (event) {
+                    const target = event.target;
+    
+                    // Перевіряємо, чи елемент є текстовим вузлом, який можна редагувати
+                    if (target.tagName === "LI" && target.dataset.initialText) {
+                        // Створюємо текстове поле і дві кнопки для збереження/скидання
+                        const textInput = document.createElement("input");
+                        textInput.type = "text";
+                        textInput.value = target.innerText;
+                        textInput.classList.add("editable-input");
+    
+                        const saveButton = document.createElement("button");
+                        saveButton.innerText = "Зберегти";
+                        saveButton.onclick = function () {
+                            // Зберігаємо новий текст в localStorage та оновлюємо текст елементу
+                            localStorage.setItem(`editedText${target.innerText}`, textInput.value);
+                            target.innerText = textInput.value;
+                            // Видаляємо елементи редагування
+                            target.appendChild(saveButton);
+                            textInput.remove();
+                            saveButton.remove();
+                            resetButton.remove();
+                        };
+    
+                        const resetButton = document.createElement("button");
+                        resetButton.innerText = "Скинути";
+                        resetButton.onclick = function () {
+                            // Видаляємо змінений текст з localStorage та відновлюємо початковий текст
+                            localStorage.removeItem(`editedText${target.innerText}`);
+                            target.innerText = target.dataset.initialText;
+                            textInput.remove();
+                            saveButton.remove();
+                            resetButton.remove();
+                        };
+    
+                        // Додаємо текстове поле і кнопки до елемента
+                        target.innerText = "";
+                        target.appendChild(textInput);
+                        target.appendChild(saveButton);
+                        target.appendChild(resetButton);
+                    }
+                });
+    
+                // Завантаження збережених даних із localStorage при завантаженні сторінки
+                Array.from(editableList.children).forEach(item => {
+                    const savedText = localStorage.getItem(`editedText${item.dataset.initialText}`);
+                    if (savedText) {
+                        item.innerText = savedText;
+                    }
+                });
+            });
+        </script>
+</body>
+</html>
+
